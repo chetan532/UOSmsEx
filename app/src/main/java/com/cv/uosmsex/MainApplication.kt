@@ -1,15 +1,7 @@
 package com.cv.uosmsex
 
 import android.app.Application
-import com.cv.uosmsex.di.ApplicationComponent
+import dagger.hilt.android.HiltAndroidApp
 
-class MainApplication : Application() {
-
-    lateinit var applicationComponent: ApplicationComponent
-
-    override fun onCreate() {
-        super.onCreate()
-
-//        applicationComponent = DaggerApplicationComponent.builder().build()
-    }
-}
+@HiltAndroidApp
+class MainApplication : Application()

@@ -6,6 +6,11 @@
         <entry key="..\:/Projects/Client Projects/UOSmsEx/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Projects/Client Projects/UOSmsEx/app/src/main/res/layout/fragment_contacts.xml" value="0.32760416666666664" />
         <entry key="..\:/Projects/Client Projects/UOSmsEx/app/src/main/res/layout/fragment_messages.xml" value="0.32760416666666664" />
+        <entry key="..\:/Projects/Ex/UOSmsEx/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2485" />
+        <entry key="..\:/Projects/Ex/UOSmsEx/app/src/main/res/layout/activity_contact_details.xml" value="0.23783783783783785" />
+        <entry key="..\:/Projects/Ex/UOSmsEx/app/src/main/res/layout/activity_main.xml" value="0.23783783783783785" />
+        <entry key="..\:/Projects/Ex/UOSmsEx/app/src/main/res/layout/fragment_contacts.xml" value="0.25" />
+        <entry key="..\:/Projects/Ex/UOSmsEx/app/src/main/res/layout/item_contacts.xml" value="0.22" />
       </map>
     </option>
   </component>

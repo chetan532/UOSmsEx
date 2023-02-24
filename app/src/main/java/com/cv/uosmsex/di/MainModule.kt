@@ -1,16 +1,17 @@
 package com.cv.uosmsex.di
 
-import android.app.Application
-import com.cv.uosmsex.MainApplication
-import com.cv.uosmsex.model.Contacts
 import com.cv.uosmsex.repository.GetContactsRepository
+import com.cv.uosmsex.utils.GetSortedContacts
 import dagger.Module
 import dagger.Provides
-import javax.inject.Singleton
+import dagger.hilt.InstallIn
+import dagger.hilt.android.components.ViewModelComponent
 
 @Module
+@InstallIn(ViewModelComponent::class)
 class MainModule {
 
-//    @Provides
-//    fun provideGetContacts(getContactsRepository: GetContactsRepository) : GetContactsRepository
+    @Provides
+    fun provideGetContacts(getContactsRepository: GetContactsRepository) =
+        GetSortedContacts(getContactsRepository)
 }
