@@ -5,14 +5,22 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cv.uosmsex.model.Contacts
+import com.cv.uosmsex.model.Message
 import com.cv.uosmsex.repository.GetContactsRepository
-import dagger.hilt.android.lifecycle.HiltViewModel
+import com.cv.uosmsex.repository.MessageRepository
+import com.cv.uosmsex.utils.GetSortedMessages
 import javax.inject.Inject
 import kotlinx.coroutines.launch
 
-@HiltViewModel
-class MainViewModel @Inject constructor(private val repository: GetContactsRepository) :
+class MainViewModel @Inject constructor(
+    private val repository: GetContactsRepository,
+    private val messagesRepository: MessageRepository
+) :
     ViewModel() {
+
+    private val _messages = MutableLiveData<List<Message>>()
+    val messages: LiveData<List<Message>>
+        get() = _messages
 
     private val _contactsData = MutableLiveData<List<Contacts>>()
 
@@ -23,6 +31,13 @@ class MainViewModel @Inject constructor(private val repository: GetContactsRepos
         viewModelScope.launch {
             val result = repository.getContacts()
             _contactsData.postValue(result)
+        }
+    }
+
+    fun getMessages() {
+        viewModelScope.launch {
+            val result = GetSortedMessages(messagesRepository)
+            _messages.postValue(result.invoke())
         }
     }
 }

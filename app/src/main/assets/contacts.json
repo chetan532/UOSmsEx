@@ -1,0 +1,58 @@
+[
+    {
+        "firstName": "Chetan",
+        "lastName": "Vaghela",
+        "phone": "+91 8154073974",
+        "email": "chetanvaghela457@gmail.com",
+        "image": "https://media.glamour.com/photos/569679ce16d0dc3747f0707d/master/w_1600%2Cc_limit/sex-love-life-blogs-single-ish-what-type-of-guy-do-you-want.jpg"
+    },
+    {
+        "firstName": "Kisan",
+        "lastName": "Network",
+        "phone": "+91 9810153260",
+        "email": "em1265.remail.wellfound.com",
+        "image": "https://bookface-images.s3.amazonaws.com/logos/f3852b99f848ceae22758b53caff58fab1abfd4d.png"
+    },
+    {
+        "firstName": "Rohit",
+        "lastName": "Vaghela",
+        "phone": "+91 8347819032",
+        "email": "rv222@gmail.com",
+        "image": "https://lh3.googleusercontent.com/a-/AAuE7mDlbqjs7q5r05ijcnGPxmHJ4pWc4CUyyVgXPVU3"
+    },
+    {
+        "firstName": "John",
+        "lastName": "Doe Fake",
+        "phone": "+91 9845481548",
+        "email": "fakenumber154@gmail.com",
+        "image": "https://designpress.com/wp-content/uploads/2014/04/mad-men-hairstyle.jpg"
+    },
+    {
+        "firstName": "Abraham",
+        "lastName": "Lincoln Fake",
+        "phone": "+91 9856872445",
+        "email": "fakenumber155@gmail.com",
+        "image": "https://cdn.britannica.com/34/78134-050-3AC7D4F8/Abraham-Lincoln-photograph-Mathew-Brady.jpg?w=400&h=300&c=crop"
+    },
+    {
+        "firstName": "Alice",
+        "lastName": "Peter Fake",
+        "phone": "+91 9845748451",
+        "email": "fakenumber3@gmail.com",
+        "image": "https://media.glamour.com/photos/569679ce16d0dc3747f0707d/master/w_1600%2Cc_limit/sex-love-life-blogs-single-ish-what-type-of-guy-do-you-want.jpg"
+    },
+    {
+        "firstName": "Donald",
+        "lastName": "Trump Fake",
+        "phone": "+91 9896444646",
+        "email": "fakenumber4@gmail.com",
+        "image": "https://cdn.britannica.com/31/149831-050-83A0E45B/Donald-J-Trump-2010.jpg"
+    },
+    {
+        "firstName": "Abc",
+        "lastName": "Def Fake",
+        "phone": "+91 9756541654",
+        "email": "fakenumber5@gmail.com",
+        "image": "https://metro.co.uk/wp-content/uploads/2016/08/ad_217014428-e1472127266143.jpg?quality=90&strip=all&zoom=1&resize=480%2C477"
+    }
+]

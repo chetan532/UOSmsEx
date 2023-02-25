@@ -1,4 +1,4 @@
-package com.cv.uosmsex.presentation.main.contacts
+package com.cv.uosmsex.presentation.main.messages
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,22 +6,24 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.cv.uosmsex.databinding.ItemContactsBinding
-import com.cv.uosmsex.model.Contacts
+import com.cv.uosmsex.databinding.ItemMessagesBinding
+import com.cv.uosmsex.model.Message
 
-class ContactsAdapter(
+class MessagesAdapter(
     val onItemClick: (position: Int) -> Unit,
     val onBindComplete: (position: Int) -> Unit
 ) :
-    ListAdapter<Contacts, RecyclerView.ViewHolder>(DiffCallback) {
+    ListAdapter<Message, RecyclerView.ViewHolder>(DiffCallback) {
 
-    inner class HomeGridViewHolder(private val binding: ItemContactsBinding) :
+    inner class HomeGridViewHolder(private val binding: ItemMessagesBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(nasaData: Contacts, position: Int) {
+        fun onBind(nasaData: Message, position: Int) {
             binding.nameTxt.text = nasaData.firstName + " " + nasaData.lastName
             binding.profileImage.load(nasaData.image)
             binding.numberTxt.text = nasaData.phone
+            binding.yourOTPTxt.text = nasaData.text
+            binding.yourOTPTime.text = nasaData.date
             binding.root.setOnClickListener {
                 onItemClick(position)
             }
@@ -29,19 +31,19 @@ class ContactsAdapter(
         }
     }
 
-    object DiffCallback : DiffUtil.ItemCallback<Contacts>() {
-        override fun areItemsTheSame(oldItem: Contacts, newItem: Contacts): Boolean {
-            return oldItem.phone == newItem.phone
+    object DiffCallback : DiffUtil.ItemCallback<Message>() {
+        override fun areItemsTheSame(oldItem: Message, newItem: Message): Boolean {
+            return oldItem.date == newItem.date
         }
 
-        override fun areContentsTheSame(oldItem: Contacts, newItem: Contacts): Boolean {
+        override fun areContentsTheSame(oldItem: Message, newItem: Message): Boolean {
             return oldItem == newItem
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding =
-            ItemContactsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            ItemMessagesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return HomeGridViewHolder(binding)
     }
 

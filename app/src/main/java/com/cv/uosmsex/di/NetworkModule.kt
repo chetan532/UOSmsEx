@@ -1,19 +1,18 @@
 package com.cv.uosmsex.di
 
+import com.cv.uosmsex.repository.GetContactsRepository
 import com.cv.uosmsex.retrofit.Api
 import com.cv.uosmsex.utils.Constants
+import com.cv.uosmsex.utils.GetSortedContacts
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
-import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
 import java.util.concurrent.TimeUnit
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
-@InstallIn(ViewModelComponent::class)
 class NetworkModule {
 
     @Provides
@@ -38,4 +37,8 @@ class NetworkModule {
     fun providesApi(retrofit: Retrofit): Api {
         return retrofit.create(Api::class.java)
     }
+
+    @Provides
+    fun provideGetSortedFactsUseCase(spaceFactRepository: GetContactsRepository) =
+        GetSortedContacts(spaceFactRepository)
 }
